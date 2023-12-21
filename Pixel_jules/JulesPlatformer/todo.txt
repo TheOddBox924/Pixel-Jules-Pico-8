@@ -1,0 +1,94 @@
+1:  
+2: fix collision system -- use chatgpt cus its smarter
+3: rm mouse input entirely  -- only use for level design rn
+4: remove fart powerup and add cool ones (heres that:)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. Find screen to use
+7. Determine RPI model
+8. Find how to use MOFSET Chip via PCBway for inputs?
+9. 3D Model case to these dimensions ^
+10. Fix btn to btnp to fix button presses :L
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+NOTES::
+1. each ent in scene takes about 2-3% total mem, ambient (IE: only having ground, player, particles = ~10%)
+    1.a this means that we can have about 25 - 30 entities in the scene at a time.
+2. 
