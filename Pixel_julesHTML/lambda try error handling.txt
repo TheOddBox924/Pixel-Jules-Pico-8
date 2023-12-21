@@ -1,0 +1,48 @@
+The general layout for lambda try is:
+
+try:
+
+
+
+	Place 300 and 400 error before in main try with else/elif clauses
+	
+	# Add conditions for actions like DELETE, PATCH if needed
+
+except Exception as e:
+	 return {
+            'statusCode': (errno), # Put your errorno here
+            'body': json.dumps({'error': str(e)}) # You can also make this error response more specific -- key below
+        }
+
+
+errorno:
+2xx: sucess none  --- ( we dont use this)
+3xx: redir  error --- corrs errors i think and also api gateway
+4xx: client error --- eg invalid action
+5xx: server error --- put this else fails
+
+
+
+See also:
+lambda db table add, patch/update, get, delete
+        response = table.update_item(
+            Key={
+                'key_name': key_value,
+                'secondary_key_name': secondary_key_value
+            },
+            UpdateExpression='SET attr1 = :val1, attr2 = :val2',
+            ExpressionAttributeValues={
+                ':attr1': new_start_time,
+                ':attr2': new_end_time
+            },
+            ReturnValues='UPDATED_NEW'
+        )
+# Here, we're defining an update expression to modify attributes in the item
+# ':attr1' and ':attr2' serve as placeholders, and their actual values are provided later in expression_attribute_values
+#UPDATED_NEW should return the values found
+
+
+check if http status code is correct (2xx)
+	if response.get('ResponseMetadata', {}).get('HTTPStatusCode') == 200:
+
+
